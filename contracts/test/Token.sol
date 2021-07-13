@@ -9,7 +9,7 @@ contract Token is ERC20 {
 
     constructor(uint8 _decimals) public ERC20("yearn.finance test token", "TEST") {
         _setupDecimals(_decimals);
-        _mint(msg.sender, 30000 * 10**uint256(_decimals));
+        _mint(msg.sender, 1_000_000 * 10**uint256(_decimals));
     }
 
     function _setBlocked(address user, bool value) public virtual {
@@ -46,8 +46,8 @@ contract TokenNoReturn {
         name = "yearn.finance test token";
         symbol = "TEST";
         decimals = _decimals;
-        balanceOf[msg.sender] = 30000 * 10**uint256(_decimals);
-        totalSupply = 30000 * 10**uint256(_decimals);
+        balanceOf[msg.sender] = 1_000_000 * 10**uint256(_decimals);
+        totalSupply = 1_000_000 * 10**uint256(_decimals);
     }
 
     function _setBlocked(address user, bool value) public virtual {
